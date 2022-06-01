@@ -1,0 +1,253 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Template Documentation Template</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;Ambre FlipBook - jQuery&rdquo;  version 1</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;Ambre FlipBook - jQuery&rdquo;</h1>
+		
+		  <div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 30/10/2019<br>
+					By: flashmaniac<br>
+					WebSite: <a href="http://www.flashmaniac.net">www.flashmaniac.net</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my flipbook. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://codecanyon.net/user/flashmaniac">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+            <li><a href="#install">Installation</a></li>
+            <li><a href="#htmlStructure">FlipBook Structure</a></li>
+            <li><a href="#page_structure">Page structure</a></li>
+            <li><a href="#edit_pages">Add,remove and edit pages</a></li>
+            <li><a href="#doublePage">Double Page</a></li>
+            <li><a href="#lazy">Lazy loading</a></li>
+            <li><a href="#config">Configuration</a></li>
+            <li><a href="#deeplinking">Deep linking</a></li>                      
+			<li><a href="#cssFiles">CSS Files and Structure</a></li>
+			<li><a href="#javascript">JavaScript</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>
+			<li><a href="#browser">Using on the local computer</a></li> 
+            <li><a href="#pdf_js">PDF.js - reading PDF files live</a></li>
+            <li><a href="#page_text">Add text for page</a></li>
+            <li><a href="#links">Add links for page ( hotspot )</a></li>
+                     
+       	</ol>
+		
+		<hr>
+        
+       	<h3 id="#install"><strong>A) Installation</strong> - <a href="#toc">top</a></h3>
+		
+        <p>You do not need to install FlipBook. FlipBook works without installation.</p>
+        
+		<hr>
+        
+        <h3 id="htmlStructure"><strong>B) FlipBook Structure</strong> - <a href="#toc">top</a></h3>
+		
+        <p>The entire structure of the flipbook is in the  html file ("full-area.html" or "responsive.html" or "not-responsive.html")<br>
+           If you are using a lightbox (file "lightbox.html") then the structure is in a folder "lightbox" ( pathway "lightbox/content.html" )</p>
+        <img src="assets/images/htmlstructure.jpg"/>
+        
+		<hr>
+        
+          
+        <h3 id="page_structure"><strong>C) Page Structure</strong> - <a href="#toc">top</a></h3>
+		
+        <p>For example, pages 2 and 3:</p>
+        <p>Important attributes for you</p>
+        <ul>
+        <li>"data-background-image" - pathway to the photo (page)</li>
+        </ul>
+      <img src="assets/images/page6.jpg"/>
+        <img src="assets/images/page7.jpg"/>
+        
+		<hr>
+        
+        
+        
+        <h3 id="edit_pages"><strong>D) Add,remove and edit pages</strong> - <a href="#toc">top</a></h3>
+		
+        <p>Adding, deleting and editing page you are doing in the div with the id = fb5-book.<br> See the code below: 
+        
+        <img src="assets/images/edit_pages.jpg"/>
+        <p>Also remember edition of deep linking.<a href="#deeplinking">See Deep linking</a> See the code below:</p>
+        <img src="assets/images/edit_dep.jpg"/>
+         <p>Thumbs editing the section id = "FB5-slider". See the code below:</p>
+      <img src="assets/images/edit_thumb.jpg"/>
+      
+        <br><br>
+      <h3 id="doublePage"><strong>E) Double Page</strong> - <a href="#toc">top</a></h3>
+		
+         <p>For the left and right page you have to use classes in html file (as pictured below). Pathway to the photo must be the same.</p>
+        <img src="assets/images/double_1.jpg"/>
+        <img src="assets/images/double_2.jpg"/>
+								
+		<hr>
+        
+         <h3 id="lazy"><strong>F) Lazy loading</strong> - <a href="#toc">top</a></h3>
+		
+         <p>If you have a lot of pages loading may be slow. Then I recommend you use the "Lazy loading". The default is disabled. You can enable it in the html file. See point <a href="#config">Configuration</a>.</p>
+       
+								
+		<hr>
+        
+        
+		<hr>
+        
+        <h3 id="config"><strong>G) Configuration</strong> - <a href="#toc">top</a></h3>
+		
+        <p>The basic configuration is possible in the html file ( full-area.html or responsive.html or not-responsive.html )<br> If you are using a lightbox when the configuration is in the folder "lightbox" ( pathway -  "lightbox/config.html" ) <br>See screen below:</p>
+        <img src="assets/images/config_book.jpg"/>
+        
+		<hr>
+        
+        
+		  <h3 id="deeplinking"><strong>H) Deep linking</strong> - <a href="#toc">top</a></h3>
+		
+          <p>For each page, you can set a unique address in browser: <br><img src="assets/images/deeplinking.jpg"/></p>
+          <p>You must do this in the id="fb5-deeplinking":<br><img src="assets/images/deeplinking2.jpg"/></p>
+          								
+		<hr>
+		
+      
+        
+        
+
+		<h3 id="cssFiles"><strong>I) CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
+		
+        <p>Included .css files:</p>
+		<ol>
+        	<li>/css/style.css - main stylesheet </li>
+            <li>/css/reset.css - reset</li>
+            <li>/css/static.css - static elements</li>
+            <li>/css/elements.css - all content elements</li>
+            <li>/css/preloader.css - style for preloader</li>
+            <li>/css/font-awesome.min - style for font awesome</li>
+        </ol>
+
+		<hr>
+		
+		<h3 id="javascript"><strong>J) JavaScript</strong> - <a href="#toc">top</a></h3>
+		
+		<p>Included .js files:</p>
+		<ol>
+            <li>/js/html5.js - HTML5 for IE</li>
+            <li>/js/jquery.address-1.6.min.js</li>
+            <li>/js/jquery.fullscreen.js</li>
+            <li>/js/jquery.js - jQuery</li>
+            <li>/js/onload.js - initialization</li>
+            <li>/js/selectivizr.js - selectors for IE</li>
+            <li>/js/wait.js - preloader</li>
+            <li>/js/pdf.js - read pdf</li>
+            <li>/js/turn.js - for flip page</li>
+       </ol>
+       
+		
+		<hr>
+		
+
+        <h3 id="credits"><strong>K) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+		
+        <ol>
+            <li><a href="http://jquery.com/">jQuery</a></li>
+            <li><a href="http://meyerweb.com/eric/tools/css/reset/index.html">Eric Meyer’s reset.css</a></li>
+            <li><a href="http://code.google.com/p/html5shiv/">HTML5 JS Google</a></li>
+            <li><a href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/">jQuery prettyPhoto Plugin</a></li>
+            <li><a href="http://selectivizr.com/">Selectivizr</a></li>
+            <li><a href="https://github.com/Youscribe/turn.js">Emmanuel Garcia Turn JS</a></li>
+            <li><a href="http://www.asual.com/jquery/address/">jQuery Address Plugin</a></li>
+            <li><a href="https://github.com/martinaglv/jQuery-FullScreen">jQuery FullScreen Plugin</a></li>
+            <li><a href="https://github.com/alexanderdickson/waitForImages">waitForImages</a></li>
+            <li><a href="https://fortawesome.github.io/Font-Awesome/">Font Awesome</a></li>
+            
+             <li><a href="http://elemisfreebies.com/textures/">elemisfreebies.com/textures/</a></li>
+            <li><a href="http://graphicriver.net/item/why-not-magazine-2-sizes/2665279">3WHY NOT Magazine 2 sizes </a></li>
+            <li><a href="https://graphicriver.net/item/multipurpose-brochure-catalog-template/11017221?s_rank=34">Multipurpose Brochure Catalog Template</a></li>
+            <li><a href="https://graphicriver.net/item/minimal-square-magazine-template/17552736">Minimal Square Magazine Template</a></li>
+            <li><a href="https://graphicriver.net/item/minimal-square-magazine-template-ii/19445743?s_rank=1282">Minimal Square Magazine Template II</a></li>
+            <li><a href="http://www.feedbooks.com/book/2936/romeo-and-juliet">http://www.feedbooks.com</a></li>
+            
+            
+            
+      </ol>
+			
+        <hr>    			
+       
+         <h3 id="browser"><strong>L) Using on the local computer</strong> - <a href="#toc">top</a></h3>
+         <p><strong>Lightbox ( file 'lightbox.html' )</strong><br>
+If you use FlipBook as lightbox (file "lightbox.html) locally on your computer -  use the Firefox browser. <br>
+Lightbox uses ajax and is blocked by other browsers (but only locally). On the server file "lightbox.html" works in all browsers.
+
+</p>
+<p><strong>PDF.js ( file 'full-area-pdf.html' )</strong><br>
+If you use PDF.js ( more <a href="#pdf_js">here</a> ) for security reasons, some browsers may block library PDF.js (locally on your computer).
+But on the server - it works in all browsers. If you want to use locally - using the Firefox browser or convert your pdf to jpg (use a converter - http://pdf2jpg.net/) 
+
+</p>
+
+
+<hr>    			
+       
+      
+       
+                <h3 id="pdf_js"><strong>M) PDF.js - reading PDF files live</strong> - <a href="#toc">top</a></h3>
+         <p>FlipBook uses the library PDF.js. If you want your FlipBook to read the pdf file you need to specify only pathway to a pdf file. See <a href="#config">Configuration</a> -  variable 'pdf_url'. There, enter your pathawy to a pdf file. Example of reading PDF files - a file "full-area-pdf.html".</p>
+         <strong><p>NOTE:</strong><br>
+         For security reasons, some browsers may block library PDF.js (locally on your computer). <br>
+         More see <a href="#browser">Using on the local computer</a>
+         
+         
+         </p>
+<hr>    			
+      
+       
+                <h3 id="page_text"><strong>N) Add text for page</strong> - <a href="#toc">top</a></h3>
+         <p>For each page you can add text.
+See the picture below (text - highlighted by a red frame). Check the <a href="#page_structure">page structure</a> (if you do not know)</p>
+         <img src="assets/images/page_text.jpg"/>
+<hr>    
+
+ <h3 id="links"><strong>O) Add links for page ( hootspot )</strong> - <a href="#toc">top</a></h3>
+         <p>For each page you can add unlimited number of links.
+Links are in the section id = "links". In the preview for codecanyon links are an example for page 1.</p>
+         <img src="assets/images/links.jpg"/>
+<hr>    			
+			
+       
+		
+		<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p class="append-bottom alt large"><strong>flashmaniac</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>
