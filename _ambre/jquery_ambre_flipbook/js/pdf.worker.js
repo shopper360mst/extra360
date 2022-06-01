@@ -23217,31 +23217,31 @@ exports.FileSpec = FileSpec;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.getSupplementalGlyphMapForArialBlack = exports.getGlyphMapForStandardFonts = exports.getSymbolsFonts = exports.getSerifFonts = exports.getNonStdFontMap = exports.getStdFontMap = undefined;
+exports.getSupplementalGlyphMapForNoto SansBlack = exports.getGlyphMapForStandardFonts = exports.getSymbolsFonts = exports.getSerifFonts = exports.getNonStdFontMap = exports.getStdFontMap = undefined;
 
 var _util = __w_pdfjs_require__(0);
 
 var getStdFontMap = (0, _util.getLookupTableFactory)(function (t) {
-  t['ArialNarrow'] = 'Helvetica';
-  t['ArialNarrow-Bold'] = 'Helvetica-Bold';
-  t['ArialNarrow-BoldItalic'] = 'Helvetica-BoldOblique';
-  t['ArialNarrow-Italic'] = 'Helvetica-Oblique';
-  t['ArialBlack'] = 'Helvetica';
-  t['ArialBlack-Bold'] = 'Helvetica-Bold';
-  t['ArialBlack-BoldItalic'] = 'Helvetica-BoldOblique';
-  t['ArialBlack-Italic'] = 'Helvetica-Oblique';
-  t['Arial-Black'] = 'Helvetica';
-  t['Arial-Black-Bold'] = 'Helvetica-Bold';
-  t['Arial-Black-BoldItalic'] = 'Helvetica-BoldOblique';
-  t['Arial-Black-Italic'] = 'Helvetica-Oblique';
-  t['Arial'] = 'Helvetica';
-  t['Arial-Bold'] = 'Helvetica-Bold';
-  t['Arial-BoldItalic'] = 'Helvetica-BoldOblique';
-  t['Arial-Italic'] = 'Helvetica-Oblique';
-  t['Arial-BoldItalicMT'] = 'Helvetica-BoldOblique';
-  t['Arial-BoldMT'] = 'Helvetica-Bold';
-  t['Arial-ItalicMT'] = 'Helvetica-Oblique';
-  t['ArialMT'] = 'Helvetica';
+  t['Noto SansNarrow'] = 'Helvetica';
+  t['Noto SansNarrow-Bold'] = 'Helvetica-Bold';
+  t['Noto SansNarrow-BoldItalic'] = 'Helvetica-BoldOblique';
+  t['Noto SansNarrow-Italic'] = 'Helvetica-Oblique';
+  t['Noto SansBlack'] = 'Helvetica';
+  t['Noto SansBlack-Bold'] = 'Helvetica-Bold';
+  t['Noto SansBlack-BoldItalic'] = 'Helvetica-BoldOblique';
+  t['Noto SansBlack-Italic'] = 'Helvetica-Oblique';
+  t['Noto Sans-Black'] = 'Helvetica';
+  t['Noto Sans-Black-Bold'] = 'Helvetica-Bold';
+  t['Noto Sans-Black-BoldItalic'] = 'Helvetica-BoldOblique';
+  t['Noto Sans-Black-Italic'] = 'Helvetica-Oblique';
+  t['Noto Sans'] = 'Helvetica';
+  t['Noto Sans-Bold'] = 'Helvetica-Bold';
+  t['Noto Sans-BoldItalic'] = 'Helvetica-BoldOblique';
+  t['Noto Sans-Italic'] = 'Helvetica-Oblique';
+  t['Noto Sans-BoldItalicMT'] = 'Helvetica-BoldOblique';
+  t['Noto Sans-BoldMT'] = 'Helvetica-Bold';
+  t['Noto Sans-ItalicMT'] = 'Helvetica-Oblique';
+  t['Noto SansMT'] = 'Helvetica';
   t['Courier-Bold'] = 'Courier-Bold';
   t['Courier-BoldItalic'] = 'Courier-BoldOblique';
   t['Courier-Italic'] = 'Courier-Oblique';
@@ -23846,7 +23846,7 @@ var getGlyphMapForStandardFonts = (0, _util.getLookupTableFactory)(function (t) 
   t[3393] = 1159;
   t[3416] = 8377;
 });
-var getSupplementalGlyphMapForArialBlack = (0, _util.getLookupTableFactory)(function (t) {
+var getSupplementalGlyphMapForNoto SansBlack = (0, _util.getLookupTableFactory)(function (t) {
   t[227] = 322;
   t[264] = 261;
   t[291] = 346;
@@ -23856,7 +23856,7 @@ exports.getNonStdFontMap = getNonStdFontMap;
 exports.getSerifFonts = getSerifFonts;
 exports.getSymbolsFonts = getSymbolsFonts;
 exports.getGlyphMapForStandardFonts = getGlyphMapForStandardFonts;
-exports.getSupplementalGlyphMapForArialBlack = getSupplementalGlyphMapForArialBlack;
+exports.getSupplementalGlyphMapForNoto SansBlack = getSupplementalGlyphMapForNoto SansBlack;
 
 /***/ }),
 /* 17 */
@@ -31188,10 +31188,10 @@ var Font = function FontClosure() {
         for (charCode in GlyphMapForStandardFonts) {
           map[+charCode] = GlyphMapForStandardFonts[charCode];
         }
-        if (/Arial-?Black/i.test(name)) {
-          var SupplementalGlyphMapForArialBlack = (0, _standard_fonts.getSupplementalGlyphMapForArialBlack)();
-          for (charCode in SupplementalGlyphMapForArialBlack) {
-            map[+charCode] = SupplementalGlyphMapForArialBlack[charCode];
+        if (/Noto Sans-?Black/i.test(name)) {
+          var SupplementalGlyphMapForNoto SansBlack = (0, _standard_fonts.getSupplementalGlyphMapForNoto SansBlack)();
+          for (charCode in SupplementalGlyphMapForNoto SansBlack) {
+            map[+charCode] = SupplementalGlyphMapForNoto SansBlack[charCode];
           }
         }
         var isIdentityUnicode = this.toUnicode instanceof IdentityToUnicodeMap;

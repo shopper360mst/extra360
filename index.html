@@ -5,7 +5,13 @@
     <meta content="width=device-width,initial-scale=1" name="viewport">
     <title>SQM Insider</title>
     <link type="text/css" href="css/style.css" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Play:400,700">
+    <link type="text/css" href="css/custom.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+        integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <link type="text/css" href="css/font-awesome.min.css" rel="stylesheet">
 
     <!-- add js code -->
@@ -17,7 +23,10 @@
     <script src="js/jquery.fullscreen.js"></script>
     <script src="js/jquery.address-1.6.min.js"></script>
     <script src="js/pdf.js"></script>
+    <script src="js/chart.page.js"></script>
     <script src="js/onload.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 
     <style>
         html,
@@ -34,17 +43,14 @@
 
     <!-- begin flipbook  -->
     <div id="fb5-ajax" data-cat="SQM_Insider" data-template="true">
-
         <!-- BACKGROUND FLIPBOOK -->
         <div class="fb5-bcg-book"></div>
-
         <!-- BEGIN PRELOADER -->
         <div class="fb5-preloader"></div>
         <!-- END PRELOADER -->
 
         <!-- BEGIN STRUCTURE HTML FLIPBOOK -->
         <div class="fb5" id="fb5">
-
             <!-- CONFIGURATION BOOK -->
             <section id="config">
                 <ul>
@@ -72,7 +78,7 @@
 
             <!-- BEGIN CONTAINER BOOK -->
             <div id="fb5-container-book">
-                <!-- BEGIN deep linking -->
+                <!-- BEGIN DEEP LINK-->
                 <section id="fb5-deeplinking">
                     <ul>
                         <li data-address="page1" data-page="1"></li>
@@ -81,7 +87,7 @@
                         <li data-address="page4" data-page="4"></li>
                     </ul>
                 </section>
-                <!-- END deep linking -->
+                <!-- END DEEP LINK-->
 
                 <section id="fb5-about"></section>
                 <section id="links"></section>
@@ -96,7 +102,7 @@
                             </div>
                         </div>
                     </div>
-                    <div data-background-image="pages/page_blank.png">
+                    <div data-background-image="pages/sample.png">
                         <div class="fb5-cont-page-book">
                             <div class="fb5-gradient-page"></div>
                             <canvas id="canv2"></canvas>
@@ -104,7 +110,7 @@
                             </div>
                         </div>
                     </div>
-                    <div data-background-image="pages/page_blank.png">
+                    <div data-background-image="pages/joinus.png">
                         <div class="fb5-cont-page-book">
                             <div class="fb5-gradient-page"></div>
                             <canvas id="canv3"></canvas>
@@ -117,6 +123,13 @@
                             <div class="fb5-gradient-page"></div>
                             <canvas id="canv4"></canvas>
                             <div class="fb5-page-book">
+                                <h3>Build-in Analytics</h3>
+                                <div class="mx-auto	chart-container">
+                                    <canvas id="chart01"></canvas>
+                                </div>
+                                <div class="mx-auto chart-container">
+                                    <canvas id="chart02"></canvas>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -128,17 +141,17 @@
             <!-- BEGIN FOOTER -->
             <div id="fb5-footer">
                 <div class="fb5-bcg-tools"></div>
-
+                <a id="fb5-logo" target="_blank" href="https://shopper360.com.my"></a>
 
                 <div class="fb5-menu" id="fb5-center">
                     <ul>
                         <li>
                             <a title="show home page" class="fb5-home"><i class="fa fa-home"></i></a>
                         </li>
-                        <!-- <li>
+                        <!--<li>
                             <a title="download pdf" class="fb5-download" href="img/file.zip"><i
                                     class="fa fa-download"></i></a>
-                        </li> -->
+                        </li>-->
                         <li>
                             <a title="prev page" class="fb5-arrow-left"><i class="fa fa-chevron-left"></i>
                             </a>
@@ -162,9 +175,9 @@
                     </ul>
                 </div>
 
+                <!-- icon page manager -->
                 <div class="fb5-menu" id="fb5-right">
                     <ul>
-                        <!-- icon page manager -->
                         <li class="fb5-goto">
                             <label for="fb5-page-number" id="fb5-label-page-number">PAGE</label>
                             <input type="text" id="fb5-page-number" style="width: 25px;">

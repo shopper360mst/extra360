@@ -27,7 +27,7 @@ a img {border:none;}
 .append-0 {padding-right:20px;}
 
 /* typography.css */
-body {font-size:100%;color:#222;background:#fff;font-family:"Arial", Arial, Helvetica, sans-serif;padding-top:30px;}
+body {font-size:100%;color:#222;background:#fff;font-family:"Noto Sans", Noto Sans, Helvetica, sans-serif;padding-top:30px;}
 h1, h2, h3, h4, h5, h6 {font-weight:normal;color:#111;}
 h1 {font-size:2.6em;line-height:1;margin-bottom:0.5em;}
 h2 {font-size:1.9em;margin-bottom:0.75em;}

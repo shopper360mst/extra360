@@ -1,0 +1,21 @@
+* {
+    font-family:Noto Sans;
+    font-weight: 800;
+}
+
+.chart-container {
+    font-weight: 800;
+    width:100% !important;
+    height:450px !important;
+    position:relative; 
+    box-sizing: border-box !important;
+}
+
+.chart-container canvas {
+    width:100%;
+    height:450px; 
+}
+
+.debug-line {
+    border:1px dashed red !important;
+}

@@ -137,7 +137,7 @@
 
 
 #fb5 .fb5-menu li.fb5-goto #fb5-label-page-number {
-	font-family:Arial,sans-serif;
+	font-family:Noto Sans,sans-serif;
 	display:inline;
 	float: left;
 	margin: 6px 5px 0 0;
@@ -201,7 +201,7 @@
 #fb5 .fb5-menu li.fb5-goto button {
 	box-shadow:none;
 	text-shadow:none;
-	font-family: Arial;
+	font-family: Noto Sans;
 	position: absolute; 
 	right: 0px; 
 	top: 11px;
@@ -221,7 +221,7 @@
 -------------------------------------------------------------- */
 
 #fb5 .fb5-tooltip {
-	font-family:Arial,sans-serif;
+	font-family:Noto Sans,sans-serif;
 	position: absolute;
 	left: 0;
 	top: 250px;

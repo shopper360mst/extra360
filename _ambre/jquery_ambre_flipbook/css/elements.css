@@ -87,7 +87,7 @@
 }
 
 	#fb5 #fb5-contact form h3 {
-		font-family:Arial,sans-serif !important;
+		font-family:Noto Sans,sans-serif !important;
 		margin: 0 0 6px 0;
 		font-size: 0.875em !important;
 		font-weight: bold;
@@ -104,7 +104,7 @@
 	
 	#fb5 #fb5-contact form input,
 	#fb5 #fb5-contact form textarea {
-		font-family:Arial, Helvetica, sans-serif;
+		font-family:Noto Sans, Helvetica, sans-serif;
 		box-shadow:none;
 		width: 270px;
 		height:30px;
@@ -149,7 +149,7 @@
 		margin: 10px 0 0 100px;
 		padding: 4px 8px;
 		text-align: center;
-		font-family:Arial, Helvetica, sans-serif;
+		font-family:Noto Sans, Helvetica, sans-serif;
 		/*text-transform: uppercase;/*/
 		font-size: 11px;
 		color: white;
@@ -181,7 +181,7 @@
 	#fb5 #fb5-contact .fb5-thanks h1 {
 		 font-size:18px !important;
 		 color:#444 444 !important;
-		 font-family:Arial, Helvetica, sans-serif !important;
+		 font-family:Noto Sans, Helvetica, sans-serif !important;
 	}
 	
 	#fb5 #fb5-contact .fb5-thanks p {

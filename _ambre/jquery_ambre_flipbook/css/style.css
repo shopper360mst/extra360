@@ -53,7 +53,7 @@
 
 
 #fb5{
-   font-family:Arial,sans-serif;	
+   font-family:Noto Sans,sans-serif;	
    font-size:14px;	
    -webkit-text-size-adjust:none;
    position:absolute;
@@ -438,7 +438,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#69cccccc', e
 	#fb5 .fb5-meta .fb5-description {
 			font-size: 11px;
 			color: #666;
-	        font-family:Arial,sans-serif;
+	        font-family:Noto Sans,sans-serif;
 	}
 
 	#fb5 .fb5-meta.fb5-left { 
@@ -531,7 +531,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#69cccccc', e
 	#fb5 .fb5-page-book h4,
 	#fb5 .fb5-page-book h5,
 	#fb5 .fb5-page-book h6 {
-	   font-family:Arial,sans-serif;
+	   font-family:Noto Sans,sans-serif;
 	   text-transform:none;
 	   margin:0px;
 	   
@@ -792,7 +792,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#69cccccc', e
 		/* formatt page for flipbook  /*/
 		#fb5 .fb5-page-book p {
 		   color:#77797F;
-		   font-family:Arial;
+		   font-family:Noto Sans;
 		   font-size:38px;
 	    }
 		#fb5 .fb5-page-book a {
@@ -801,37 +801,37 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#69cccccc', e
 		 }
 		#fb5 .fb5-page-book h1 {
 	   	   color:#77797F !important;
-		   font-family:Arial !important;
+		   font-family:Noto Sans !important;
 		   font-size:32px !important;
 	    }
 		#fb5 .fb5-page-book h2 {
 	   	   color:#77797F !important;
-		   font-family:Arial !important;
+		   font-family:Noto Sans !important;
 		   font-size:26px !important;
 	    }
 		#fb5 .fb5-page-book h3 {
 	   	   color:#77797F !important;
-		   font-family:Arial !important;
+		   font-family:Noto Sans !important;
 		   font-size:24px !important;
 	    }
 		#fb5 .fb5-page-book h4 {
 	   	   color:#77797F !important;
-		   font-family:Arial !important;
+		   font-family:Noto Sans !important;
 		   font-size:72px !important;
 	    }
 		#fb5 .fb5-page-book h5 {
 	   	   color:#77797F !important;
-		   font-family:Arial !important;
+		   font-family:Noto Sans !important;
 		   font-size:20px !important;
 	    }
 		#fb5 .fb5-page-book h6 {
 	   	   color:#77797F !important;
-		   font-family:Arial !important;
+		   font-family:Noto Sans !important;
 		   font-size:18px !important;
 	    }
 		#fb5 .fb5-page-book li {
            color:#77797F;	
-		   font-family:Arial;
+		   font-family:Noto Sans;
 		   font-size:14px;		
 		}
 		#fb5 .fb5-page-book ul li a,#fb5 .fb5-page-book ol li a {
@@ -842,7 +842,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#69cccccc', e
 		/*  about style  /*/
 		#fb5 #fb5-about p,#fb5 #fb5-about li {
 		   color: #FFFFFF;
-		   font-family:Arial;
+		   font-family:Noto Sans;
 		   font-size:11px;
 	    }  
 		#fb5 #fb5-about a {
@@ -850,31 +850,31 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#69cccccc', e
 		}
 		#fb5 #fb5-about h1 {
 		   color: #FFFFFF;
-		   font-family:Arial;
+		   font-family:Noto Sans;
 		   font-size:26px;
 	    }  
 		#fb5 #fb5-about h2 {
 		   color: #FFFFFF;
-		   font-family:Arial;
+		   font-family:Noto Sans;
 		   font-size:24px;
 	    }  
 		#fb5 #fb5-about h3 {
 		   color: #FFFFFF !important;
-		   font-family:Arial !important;
+		   font-family:Noto Sans !important;
 		   font-size:22px !important;
 	    }  
 		#fb5 #fb5-about h4 {
 		   color: #FFFFFF;
-		   font-family:Arial;
+		   font-family:Noto Sans;
 	    }  
 		#fb5 #fb5-about h5 {
 		   color: #FFFFFF;
-		   font-family:Arial;
+		   font-family:Noto Sans;
 		   font-size:18px;
 	    }  
 		#fb5 #fb5-about h6 {
 		   color: #FFFFFF;
-		   font-family:Arial;
+		   font-family:Noto Sans;
 		   font-size:16px;
 	    }  
 		/* back  button  /*/
