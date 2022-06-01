@@ -4,8 +4,25 @@
 <head>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="scripts/turn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <style type="text/css">
+        * {
+            font-family: 'Noto Sans';
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h5 {
+            text-align: center;
+            margin-bottom: 2px;
+        }
+
         body {
             background: #ccc;
         }
@@ -15,6 +32,7 @@
             margin-right: auto;
             width: 1152px;
             height: 752px;
+
         }
 
         #magazine .turn-page {
@@ -28,9 +46,21 @@
 
     <div id="magazine">
         <div style="background-image:url(pages/page_cover.png);"></div>
-        <div style="background-image:url(pages/page_01.png);"></div>
-        <div style="background-image:url(pages/page_02.png);"></div>
-        <div style="background-image:url(pages/page_03.png);"></div>
+        <div style="background-image:url(pages/page_blank.png);"></div>
+        <div style="background-image:url(pages/page_blank.png);"></div>
+        <div style="background-image:url(pages/page_blank.png);"></div>
+        <div style="background-image:url(pages/page_blank.png);"></div>
+        <div style="background-image:url(pages/page_blank.png);"></div>
+        <div style="background-image:url(pages/page_blank.png);"></div>
+        <div style="background-image:url(pages/page_blank.png);"></div>
+        <div style="background-image:url(pages/page_blank.png);">
+            <div style="position:relative;width:310px;height:650px;margin-left:auto;margin-right:auto;padding:15px">
+                <h1>Build-in Analytics</h1>
+                <h5>Mobile Users</h5>
+                <canvas id="myChart01" style="margin-bottom:10px"></canvas>
+                <canvas id="myChart02" style="margin-bottom:10px"></canvas>
+            </div>
+        </div>
 
     </div>
 
@@ -42,10 +72,11 @@
                 display: 'double',
                 acceleration: true,
                 gradients: !$.isTouch,
-                elevation: 50,
+                elevation: 150,
+                inclination: 5,
                 when: {
                     turned: function (e, page) {
-                        /*console.log('Current view: ', $(this).turn('view'));*/
+                        console.log('Current view: ', $(this).turn('view'));
                     }
                 }
             });
@@ -60,6 +91,82 @@
                 $('#magazine').turn('next');
 
         });
+
+    </script>
+    <script>
+        //--Chart JS-- 
+        const dataDN = {
+            labels: [
+                'IPhone',
+                'Android',
+                'Others'
+            ],
+            datasets: [{
+                label: 'My First Dataset',
+                data: [300, 50, 100],
+                backgroundColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 205, 86)'
+                ],
+                hoverOffset: 4
+            }]
+        };
+        const configDN = {
+            type: 'doughnut',
+            data: dataDN,
+        };
+
+        const labelsBar = ["Jan", "Feb", "Mar", "May", "Jun", "Jul"];
+        const dataBAR = {
+            labels: labelsBar,
+            datasets: [{
+                label: 'Insider Downloads',
+                data: [65, 59, 80, 81, 56, 55, 40],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 205, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(201, 203, 207, 0.2)'
+                ],
+                borderColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(255, 159, 64)',
+                    'rgb(255, 205, 86)',
+                    'rgb(75, 192, 192)',
+                    'rgb(54, 162, 235)',
+                    'rgb(153, 102, 255)',
+                    'rgb(201, 203, 207)'
+                ],
+                borderWidth: 1
+            }]
+        };
+
+        const configBAR = {
+            type: 'bar',
+            data: dataBAR,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            },
+        };
+
+        const ctxDN = document.getElementById('myChart01').getContext('2d');
+        const myChart01 = new Chart(ctxDN, configDN);
+
+        const ctxBAR = document.getElementById('myChart02').getContext('2d');
+        const myChart02 = new Chart(ctxBAR, configBAR);
+        myChart01.options.animation = true;
+        myChart01.options.autoPadding = true;
+
+
+
 
     </script>
 
