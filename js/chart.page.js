@@ -56,11 +56,11 @@ ChartPage.JS = (function () {
             label: "Unique Visit Per Month",
             data: [65, 59, 80, 81, 56],
             backgroundColor: [
-              "rgba(255, 99, 132, 0.6)",
-              "rgba(255, 159, 64, 0.6)",
-              "rgba(255, 205, 86, 0.6)",
-              "rgba(75, 192, 192, 0.6)",
-              "rgba(54, 162, 235, 0.6)",
+              "rgba(255, 99, 132, 0.8)",
+              "rgba(255, 159, 64, 0.8)",
+              "rgba(255, 205, 86, 0.8)",
+              "rgba(75, 192, 192, 0.8)",
+              "rgba(54, 162, 235, 0.8)",
             ],
             borderColor: [
               "rgb(255, 99, 132)",
