@@ -86,7 +86,11 @@
                         <li data-address="page3" data-page="3"></li>
                         <li data-address="page4" data-page="4"></li>
                         <li data-address="page5" data-page="5"></li>
-                        <li data-address="page5" data-page="6"></li>
+                        <li data-address="page6" data-page="6"></li>
+                        <li data-address="page7" data-page="7"></li>
+                        <li data-address="page8" data-page="8"></li>
+                        <li data-address="page9" data-page="9"></li>
+                        <li data-address="page10" data-page="10"></li>
                     </ul>
                 </section>
                 <!-- END DEEP LINK-->
@@ -96,7 +100,7 @@
 
                 <!-- BEGIN PAGES -->
                 <div id="fb5-book">
-                    <div data-background-image="pages/page_cover.png">
+                    <div data-background-image="pages/page_cover.png" class="hard">
                         <div class="fb5-cont-page-book">
                             <div class="fb5-gradient-page"></div>
                             <canvas id="canv1"></canvas>
@@ -112,7 +116,7 @@
                             </div>
                         </div>
                     </div>
-                    <div data-background-image="pages/breakt.png" style="background-color:transparent">
+                    <div data-background-image="pages/breakt.png">
                         <div class="fb5-cont-page-book">
                             <div class="fb5-gradient-page"></div>
                             <canvas id="canv3"></canvas>
@@ -120,7 +124,7 @@
                             </div>
                         </div>
                     </div>
-                    <div data-background-image="pages/breakt_otherside.png" style="background-color:transparent">
+                    <div data-background-image="pages/breakt_otherside.png">
                         <div class="fb5-cont-page-book">
                             <div class="fb5-gradient-page"></div>
                             <canvas id="canv4"></canvas>
@@ -141,6 +145,26 @@
                             <div class="fb5-gradient-page"></div>
                             <canvas id="canv6"></canvas>
                             <div class="fb5-page-book">
+                            </div>
+                        </div>
+                    </div>
+                    <div data-background-image="pages/page_blank.png">
+                        <div class="fb5-cont-page-book">
+                            <div class="fb5-gradient-page"></div>
+                            <canvas id="canv7"></canvas>
+
+                            <div class="fb5-page-book fb5-custom-fullpage">
+                                <video src="video/postcovid.mp4" id="vidpage" class="full_page_video"
+                                    autoplay="true"></video>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div data-background-image="pages/page_blank.png">
+                        <div class="fb5-cont-page-book">
+                            <div class="fb5-gradient-page"></div>
+                            <canvas id="canv8"></canvas>
+                            <div class="fb5-page-book">
                                 <h3>Build-in Analytics</h3>
                                 <div class="mx-auto	chart-container">
                                     <canvas id="chart01"></canvas>
@@ -154,7 +178,7 @@
                     <div data-background-image="pages/page_backcover.png">
                         <div class="fb5-cont-page-book">
                             <div class="fb5-gradient-page"></div>
-                            <canvas id="canv7"></canvas>
+                            <canvas id="canv9"></canvas>
                             <div class="fb5-page-book">
                             </div>
                         </div>
@@ -162,7 +186,7 @@
                     <div data-background-image="pages/page_backcover.png">
                         <div class="fb5-cont-page-book">
                             <div class="fb5-gradient-page"></div>
-                            <canvas id="canv8"></canvas>
+                            <canvas id="canv10"></canvas>
                             <div class="fb5-page-book">
                             </div>
                         </div>
@@ -225,5 +249,17 @@
     </div>
     <!-- end flipbook -->
 </body>
+<script>
+    document.addEventListener("onPageTurned", (evt) => {
+        console.log("!", evt.detail);
+        let pageNum = evt.detail;
+        if ((pageNum == 6) || (pageNum == 7)) {
+            let vidPage = document.getElementById('vidpage');
+
+            vidPage.currentTime = 0;
+            vidPage.play();
+        }
+    })
+</script>
 
 </html>
