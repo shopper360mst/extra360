@@ -64,12 +64,12 @@
                     <li key="deeplinking_enabled">true</li> <!-- enabled/disabled deeplinking -->
                     <li key="lazy_loading_pages">false</li> <!-- enabled/disabled lazy loading for pages in flipbook -->
                     <li key="lazy_loading_thumbs">false</li> <!-- enabled/disabled lazdy loading for thumbs -->
-                    <li key="double_click_enabled">true</li> <!-- enabled/disabled double click mouse for flipbook -->
+                    <li key="double_click_enabled">false</li> <!-- enabled/disabled double click mouse for flipbook -->
                     <li key="rtl">false</li> <!-- enabled/disabled 'right to left' for eastern countries -->
                     <li key="pdf_url"></li> <!-- pathway to a pdf file ( the file will be read live ) -->
                     <li key="pdf_scale">1</li>
                     <li key="page_mode">auto</li> <!-- value to 'single', 'double', or 'auto' -->
-                    <li key="sound_sheet"></li> <!-- sound for sheet -->
+                    <li key="sound_sheet">audio/page_turn.mp3</li> <!-- sound for sheet -->
                     <li key="logo_url">img/logo.png</li> <!-- logo url -->
                     <li key="icon_color">#6B2200</li> <!-- icon color -->
                 </ul>
@@ -148,6 +148,22 @@
                                 <div class="mx-auto chart-container">
                                     <canvas id="chart02"></canvas>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-background-image="pages/page_backcover.png">
+                        <div class="fb5-cont-page-book">
+                            <div class="fb5-gradient-page"></div>
+                            <canvas id="canv7"></canvas>
+                            <div class="fb5-page-book">
+                            </div>
+                        </div>
+                    </div>
+                    <div data-background-image="pages/page_backcover.png">
+                        <div class="fb5-cont-page-book">
+                            <div class="fb5-gradient-page"></div>
+                            <canvas id="canv8"></canvas>
+                            <div class="fb5-page-book">
                             </div>
                         </div>
                     </div>
