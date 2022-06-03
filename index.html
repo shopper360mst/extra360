@@ -251,13 +251,15 @@
 </body>
 <script>
     document.addEventListener("onPageTurned", (evt) => {
-        console.log("!", evt.detail);
         let pageNum = evt.detail;
         if ((pageNum == 6) || (pageNum == 7)) {
             let vidPage = document.getElementById('vidpage');
-
-            vidPage.currentTime = 0;
-            vidPage.play();
+            try {
+                vidPage.currentTime = 0;
+                vidPage.play();
+            } catch (e) {
+                console.log("Error ...", e);
+            }
         }
     })
 
