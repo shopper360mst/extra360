@@ -1751,6 +1751,9 @@ NO the problem with the Iphone Landscape
           sound_sheet.currentTime = 0;
           sound_sheet.play();
         }
+      } else {
+        sound_sheet.currentTime = 0;
+        sound_sheet.play();
       }
     },
 
