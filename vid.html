@@ -10,11 +10,18 @@
 </head>
 
 <body>
-    <h1>Video</h1>
+    <h1>Video and Audio Test</h1>
     <video autoplay="true" muted id="vidpage" class="full_page_video" preload="auto">
         <source src="video/postcovid.mp4" type="video/mp4">
         </source>
     </video>
+    <audio autoplay="false" id="audioPage" controls preload="auto">
+        <source src="audio/page_turn.mp3">
+        </source>
+    </audio>
+    <script>
+        document.getElementById('audioPage').play();
+    </script>
 </body>
 
 </html>
