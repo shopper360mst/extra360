@@ -58,6 +58,14 @@
     color:white;
 }
 
+.sprite_bottom{
+    position:absolute;
+    bottom:120px !important;
+}
+.sprite_left{
+    left:-20px !important;
+}
+
 .fb5-custom-fullpage{
     top:0px !important; 
     left:0px !important; 

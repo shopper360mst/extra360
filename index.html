@@ -18,6 +18,8 @@
 
     <!-- add js code -->
     <script src="js/jquery.js"></script>
+    <script src="js/anime.min.js"></script>
+    <script src="js/jsprite.js"></script>
     <script src="js/jquery_no_conflict.js"></script>
     <script src="js/turn.js"></script>
     <script src="js/wait.js"></script>
@@ -140,18 +142,28 @@
                             </div>
                         </div>
                     </div>
-                    <div data-background-image="pages/page_blank.png">
+                    <div data-background-image="pages/page_scenery.png">
                         <div class="fb5-cont-page-book">
                             <div class="fb5-gradient-page"></div>
                             <canvas id="canv6"></canvas>
                             <div class="fb5-page-book">
                             </div>
+                            <div id="sprite-container-1" class="sprite_bottom"></div>
+                        </div>
+                    </div>
+                    <div data-background-image="pages/page_scenery_flip.png">
+                        <div class="fb5-cont-page-book">
+                            <div class="fb5-gradient-page"></div>
+                            <canvas id="canv7"></canvas>
+                            <div class="fb5-page-book">
+                            </div>
+                            <div id="sprite-container-2" class="sprite_bottom sprite_left"></div>
                         </div>
                     </div>
                     <div data-background-image="pages/page_blank.png">
                         <div class="fb5-cont-page-book">
                             <div class="fb5-gradient-page"></div>
-                            <canvas id="canv7"></canvas>
+                            <canvas id="canv8"></canvas>
 
                             <div class="fb5-page-book fb5-custom-fullpage">
                                 <video muted id="vidpage" class="full_page_video" preload="auto">
@@ -172,7 +184,7 @@
                     <div data-background-image="pages/page_blank.png">
                         <div class="fb5-cont-page-book">
                             <div class="fb5-gradient-page"></div>
-                            <canvas id="canv8"></canvas>
+                            <canvas id="canv9"></canvas>
                             <div class="fb5-page-book">
                                 <h3>Build-in Analytics</h3>
                                 <div class="mx-auto	chart-container">
@@ -181,14 +193,6 @@
                                 <div class="mx-auto chart-container">
                                     <canvas id="chart02"></canvas>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div data-background-image="pages/page_backcover.png">
-                        <div class="fb5-cont-page-book">
-                            <div class="fb5-gradient-page"></div>
-                            <canvas id="canv9"></canvas>
-                            <div class="fb5-page-book">
                             </div>
                         </div>
                     </div>
@@ -259,9 +263,79 @@
     <!-- end flipbook -->
 </body>
 <script>
+    function setSpriteIdle(targetSprite){
+        targetSprite.setStartFrame(1);
+        targetSprite.setLength(15);
+        targetSprite.start();
+        };
+    function setSpriteRun(targetSprite){
+        targetSprite.setStartFrame(16);
+        targetSprite.start();
+        };
     document.addEventListener("onPageTurned", (evt) => {
+        let sprite1,sprite2,animation1,animation2;
+        let sprite1Played = false;
+        let sprite2Played = false;
         let pageNum = evt.detail;
-        if ((pageNum == 6) || (pageNum == 7)) {
+        console.log("pageNum: " + pageNum);
+        if((pageNum == 6) || (pageNum == 7)){
+            sprite1 = new jSprite({
+                spriteSheet: "./img/idle_run_s.png",
+                container: "sprite-container-1",
+                columns: 10,
+                rows: 3,
+                timing: 15,
+                repeat: true,
+                autoStart: false
+            });
+            animation1 = anime({
+                targets: '#sprite-container-1',
+                translateX: 840,
+                duration: 1700,
+                easing: 'linear',
+                autoplay: false,
+                begin: function(anim) {
+                    setSpriteRun(sprite1);
+                },
+                complete: function(anim) {
+                    setSpriteIdle(sprite1);
+                    if(pageNum == 7){
+                        document.getElementById("sprite-container-1").style.visibility = "hidden";
+                        sprite2 = new jSprite({
+                            spriteSheet: "./img/idle_run_s.png",
+                            container: "sprite-container-2",
+                            columns: 10,
+                            rows: 3,
+                            timing: 15,
+                            repeat: true,
+                            autoStart: false
+                        });
+                        animation2 = anime({
+                            targets: '#sprite-container-2',
+                            translateX: 700,
+                            duration: 1700,
+                            easing: 'linear',
+                            autoplay: false,
+                            begin: function(anim) {
+                                setSpriteRun(sprite2);
+                            },
+                            complete: function(anim) {
+                                setSpriteIdle(sprite2);
+                            }
+                        });
+                        if(!sprite2Played){
+                            sprite2Played = true;
+                            animation2.play();
+                        }
+                    }
+                }
+            });
+            if(!sprite1Played){
+                sprite1Played = true;
+                animation1.play();
+            }
+        }
+        if ((pageNum == 8) || (pageNum == 9)) {
             let vidPage = document.getElementById('vidpage');
             try {
                 vidPage.currentTime = 0;
@@ -270,7 +344,7 @@
                 console.log("Error ...", e);
             }
         }
-    })
+    });
 
 </script>
 <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js">
