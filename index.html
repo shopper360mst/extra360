@@ -263,6 +263,9 @@
     <!-- end flipbook -->
 </body>
 <script>
+    let sprite1,sprite2,animation1,animation2;
+    let sprite1Played = false;
+    let sprite2Played = false;
     function setSpriteIdle(targetSprite){
         targetSprite.setStartFrame(1);
         targetSprite.setLength(15);
@@ -272,14 +275,9 @@
         targetSprite.setStartFrame(16);
         targetSprite.start();
         };
-    document.addEventListener("onPageTurned", (evt) => {
-        let sprite1,sprite2,animation1,animation2;
-        let sprite1Played = false;
-        let sprite2Played = false;
-        let pageNum = evt.detail;
-        console.log("pageNum: " + pageNum);
-        if((pageNum == 6) || (pageNum == 7)){
-            sprite1 = new jSprite({
+        
+    window.addEventListener('DOMContentLoaded', (event) => {
+        sprite1 = new jSprite({
                 spriteSheet: "./img/idle_run_s.png",
                 container: "sprite-container-1",
                 columns: 10,
@@ -287,7 +285,23 @@
                 timing: 15,
                 repeat: true,
                 autoStart: false
-            });
+        });
+        sprite2 = new jSprite({
+                            spriteSheet: "./img/idle_run_s.png",
+                            container: "sprite-container-2",
+                            columns: 10,
+                            rows: 3,
+                            timing: 15,
+                            repeat: true,
+                            autoStart: false
+        });
+        document.getElementById("sprite-container-2").style.visibility = "hidden";
+    });
+    document.addEventListener("onPageTurned", (evt) => {
+        let pageNum = evt.detail;
+        console.log("pageNum: " + pageNum);
+        if((pageNum == 6) || (pageNum == 7)){
+            
             animation1 = anime({
                 targets: '#sprite-container-1',
                 translateX: 840,
@@ -301,15 +315,7 @@
                     setSpriteIdle(sprite1);
                     if(pageNum == 7){
                         document.getElementById("sprite-container-1").style.visibility = "hidden";
-                        sprite2 = new jSprite({
-                            spriteSheet: "./img/idle_run_s.png",
-                            container: "sprite-container-2",
-                            columns: 10,
-                            rows: 3,
-                            timing: 15,
-                            repeat: true,
-                            autoStart: false
-                        });
+                        document.getElementById("sprite-container-2").style.visibility = "visible";
                         animation2 = anime({
                             targets: '#sprite-container-2',
                             translateX: 700,
