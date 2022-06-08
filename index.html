@@ -278,22 +278,22 @@
         
     window.addEventListener('DOMContentLoaded', (event) => {
         sprite1 = new jSprite({
-                spriteSheet: "./img/idle_run_s.png",
-                container: "sprite-container-1",
-                columns: 10,
-                rows: 3,
-                timing: 15,
-                repeat: true,
-                autoStart: false
+            spriteSheet: "./img/idle_run_s.png",
+            container: "sprite-container-1",
+            columns: 10,
+            rows: 3,
+            timing: 15,
+            repeat: true,
+            autoStart: false
         });
         sprite2 = new jSprite({
-                            spriteSheet: "./img/idle_run_s.png",
-                            container: "sprite-container-2",
-                            columns: 10,
-                            rows: 3,
-                            timing: 15,
-                            repeat: true,
-                            autoStart: false
+            spriteSheet: "./img/idle_run_s.png",
+            container: "sprite-container-2",
+            columns: 10,
+            rows: 3,
+            timing: 15,
+            repeat: true,
+            autoStart: false
         });
         document.getElementById("sprite-container-2").style.visibility = "hidden";
     });
@@ -313,7 +313,6 @@
                 },
                 complete: function(anim) {
                     setSpriteIdle(sprite1);
-                    if(pageNum == 7){
                         document.getElementById("sprite-container-1").style.visibility = "hidden";
                         document.getElementById("sprite-container-2").style.visibility = "visible";
                         animation2 = anime({
@@ -334,7 +333,6 @@
                             animation2.play();
                         }
                     }
-                }
             });
             if(!sprite1Played){
                 sprite1Played = true;
